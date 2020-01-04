@@ -14,6 +14,9 @@
 
 int plugin_is_GPL_compatible;
 
+std::vector<int> features(57);
+std::vector<int> features_sum(57);
+
 void print_results(std::vector<int> features, const char *name)
 {
 	printf("\n\nMétodo %s\n\n", name);
@@ -67,12 +70,21 @@ void print_results(std::vector<int> features, const char *name)
 	printf("FT48 - Number of occurrences of 32-bit integer constants: %d\n", features[48]);
 	printf("FT49 - Number of occurrences of integer constant one: %d\n", features[49]);
 	printf("FT50 - Number of occurrences of 64-bit integer constants: %d\n", features[50]);
-	// printf("FT51 - Number of references of local variables in the method: %d\n", features[51]);
-	// printf("FT52 - Number of references (def/use) of static/extern variables in the method: %d\n", features[52]);
-	// printf("FT53 - Number of local variables referred in the method: %d\n", features[53]);
-	// printf("FT54 - Number of static/extern variables referred in the method: %d\n", features[54]);
-	// printf("FT55 - Number of local variables that are pointers in the method: %d\n", features[55]);
-	// printf("FT56 - Number of static/extern variables that are pointers in the method: %d\n", features[56]);
+	printf("FT51 - Number of references of local variables in the method: %d\n", features[51]);
+	printf("FT52 - Number of references (def/use) of static/extern variables in the method: %d\n", features[52]);
+	printf("FT53 - Number of local variables referred in the method: %d\n", features[53]);
+	printf("FT54 - Number of static/extern variables referred in the method: %d\n", features[54]);
+	printf("FT55 - Number of local variables that are pointers in the method: %d\n", features[55]);
+	printf("FT56 - Number of static/extern variables that are pointers in the method: %d\n", features[56]);
+}
+
+void clear_features()
+{
+	for (int i = 0; i < 57; i++)
+	{
+		features_sum[i] += features[i];
+		features[i] = 0;
+	}
 }
 
 namespace
@@ -86,7 +98,7 @@ struct plugin_features : gimple_opt_pass
 	virtual unsigned int execute(function *fun) override
 	{
 
-		std::vector<int> features(57);
+		clear_features();
 
 		basic_block bb;
 		edge e;
@@ -138,6 +150,32 @@ struct plugin_features : gimple_opt_pass
 					tree node = gimple_op(stmt, i);
 					if (node != NULL)
 					{
+						// printf("Codigo: %s - %d\n", get_tree_code_name(TREE_CODE(node)), TREE_CODE(node));
+						// printf("Tipo: %s\n", get_tree_code_name(TREE_CODE(TREE_TYPE(node))));
+						// printf("Tamanho: %d\n", TYPE_PRECISION(TREE_TYPE(node)));
+
+						if (TREE_CODE(node) == VAR_DECL)
+						{
+							if (DECL_EXTERNAL(node) != 0 || TREE_STATIC(node) != 0)
+							{
+								features[52]++;
+								features[54]++;
+								if (TREE_CODE(TREE_TYPE(node)) == POINTER_TYPE)
+								{
+									features[56]++;
+								}
+							}
+							else
+							{
+								features[51]++;
+								features[53]++;
+								if (TREE_CODE(TREE_TYPE(node)) == POINTER_TYPE)
+								{
+									features[55]++;
+								}
+							}
+						}
+
 						if (TREE_CODE(node) == INTEGER_CST)
 						{
 							if (TYPE_PRECISION(TREE_TYPE(node)) == 64)
