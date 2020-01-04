@@ -51,7 +51,7 @@ void print_results(std::vector<int> features, const char *name)
 	printf("FT32 - Number of basic block where total number of arguments for all phi-nodes is in greater than 5: %d\n", features[32]);
 	printf("FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: %d\n", features[33]);
 	printf("FT34 - Number of switch instructions in the method: %d\n", features[34]);
-	// printf("FT35 - Number of unary operations in the method: %d\n", features[35]);
+	printf("FT35 - Number of unary operations in the method: %d\n", features[35]);
 	// printf("FT36 - Number of instruction that do pointer arithmetic in the method: %d\n", features[36]);
 	// printf("FT37 - Number of indirect references via pointers (* in C): %d\n", features[37]);
 	// printf("FT38 - Number of times the address of a variables is taken (& in C): %d\n", features[38]);
@@ -61,12 +61,12 @@ void print_results(std::vector<int> features, const char *name)
 	// printf("FT42 - Number of binary operations with one of the operands an integer constant in the method: %d\n", features[42]);
 	printf("FT43 - Number of calls with pointers as arguments: %d\n", features[43]);
 	printf("FT44 - Number of calls with the number of arguments is greater than 4: %d\n", features[44]);
-	// printf("FT45 - Number of calls that return a pointer: %d\n", features[45]);
-	// printf("FT46 - Number of calls that return an integer: %d\n", features[46]);
+	printf("FT45 - Number of calls that return a pointer: %d\n", features[45]);
+	printf("FT46 - Number of calls that return an integer: %d\n", features[46]);
 	// printf("FT47 - Number of occurrences of integer constant zero: %d\n", features[47]);
-	// printf("FT48 - Number of occurrences of 32-bit integer constants: %d\n", features[48]);
+	printf("FT48 - Number of occurrences of 32-bit integer constants: %d\n", features[48]);
 	// printf("FT49 - Number of occurrences of integer constant one: %d\n", features[49]);
-	// printf("FT50 - Number of occurrences of 64-bit integer constants: %d\n", features[50]);
+	printf("FT50 - Number of occurrences of 64-bit integer constants: %d\n", features[50]);
 	// printf("FT51 - Number of references of local variables in the method: %d\n", features[51]);
 	// printf("FT52 - Number of references (def/use) of static/extern variables in the method: %d\n", features[52]);
 	// printf("FT53 - Number of local variables referred in the method: %d\n", features[53]);
@@ -92,17 +92,16 @@ struct plugin_features : gimple_opt_pass
 		edge e;
 		edge_iterator ei;
 		gimple_stmt_iterator gsi;
-		int instructions = 0, phi_nodes = 0, aux2 = 0;
+		int instructions = 0, phi_nodes = 0, aux = 0;
 
 		features[1] = n_basic_blocks_for_fn(fun) - 2;
 		features[16] = n_edges_for_fn(fun);
 
 		FOR_EACH_BB_FN(bb, fun)
 		{
-			// printf("%d\n", gimple_seq_empty_p(phi_nodes(bb)));
 			instructions = 0;
 			phi_nodes = 0;
-			aux2 = 0;
+			aux = 0;
 			FOR_EACH_EDGE(e, ei, bb->succs)
 			{
 				if (EDGE_CRITICAL_P(e) != 0)
@@ -125,16 +124,57 @@ struct plugin_features : gimple_opt_pass
 			{
 				gimple *stmt = gsi_stmt(gsi);
 				instructions++;
-				int args;
+				int args = 0;
+				int ops = gimple_num_ops(stmt);
+
+				if (get_gimple_rhs_class(gimple_expr_code(stmt)) == GIMPLE_UNARY_RHS)
+				{
+					features[35]++;
+				}
+
+				for (int i = 0; i < gimple_num_ops(gsi.ptr); i++)
+				{
+
+					tree node = gimple_op(gsi.ptr, i);
+					if (node != NULL)
+					{
+						if (TREE_CODE(node) == 25)
+						{
+							if (TYPE_PRECISION(TREE_TYPE(node)) == 64)
+							{
+								features[50]++;
+							}
+							else
+							{
+								features[48]++;
+							}
+						}
+						printf("Codigo: %s - %d\n", get_tree_code_name(TREE_CODE(node)), TREE_CODE(node));
+						printf("Tipo: %s\n", get_tree_code_name(TREE_CODE(TREE_TYPE(node))));
+						printf("Tamanho: %d\n", TYPE_PRECISION(TREE_TYPE(node)));
+					}
+				}
 
 				switch (gimple_code(stmt))
 				{
 
 				case GIMPLE_CALL:
 					features[19]++;
+					if (TREE_CODE(TREE_TYPE(gimple_call_fntype(stmt))) == POINTER_TYPE)
+					{
+						features[45]++;
+					}
+					else if (TREE_CODE(TREE_TYPE(gimple_call_fntype(stmt))) == INTEGER_TYPE)
+					{
+						features[46]++;
+					}
+
 					args = gimple_call_num_args(stmt);
+
 					if (args > 4)
+					{
 						features[44]++;
+					}
 					for (int i = 0; i < args; i++)
 					{
 						if (TREE_CODE(TREE_TYPE(gimple_call_arg(stmt, i))) == POINTER_TYPE)
@@ -143,6 +183,7 @@ struct plugin_features : gimple_opt_pass
 							break;
 						}
 					}
+
 					break;
 
 				case GIMPLE_COND:
@@ -163,7 +204,7 @@ struct plugin_features : gimple_opt_pass
 
 				case GIMPLE_PHI:
 					phi_nodes++;
-					aux2 += gimple_phi_num_args(gsi_stmt(gsi));
+					aux += gimple_phi_num_args(gsi_stmt(gsi));
 					features[28] += gimple_phi_num_args(gsi_stmt(gsi));
 					break;
 
@@ -198,11 +239,11 @@ struct plugin_features : gimple_opt_pass
 				features[31]++;
 			}
 
-			if (aux2 > 5)
+			if (aux > 5)
 			{
 				features[32]++;
 			}
-			else if (aux2 > 0)
+			else if (aux > 0)
 			{
 				features[33]++;
 			}
