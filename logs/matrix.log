@@ -1,0 +1,318 @@
+
+
+Método mkmatrix
+
+FT01 - Number of basic blocks in the method: 8
+FT02 - Number of basic blocks with a single successor: 6
+FT03 - Number of basic blocks with two successors: 2
+FT04 - Number of basic blocks with more than two successors: 0
+FT05 - Number of basic blocks with a single predecessor: 6
+FT06 - Number of basic blocks with two predecessors: 2
+FT07 - Number of basic blocks with more than two predecessors: 0
+FT08 - Number of basic blocks with a single predecessor and a single successor: 6
+FT09 - Number of basic blocks with a single predecessor and two successors: 0
+FT10 - Number of basic blocks with a two predecessors and one successor: 0
+FT11 - Number of basic blocks with two successors and two predecessors: 2
+FT12 - Number of basic blocks with more than two successors and more than two predecessors: 0
+FT13 - Number of basic blocks with number of instructions less than 15: 8
+FT14 - Number of basic blocks with number of instructions in the interval [15, 500]: 0
+FT15 - Number of basic blocks with number of instructions greater than 500: 0
+FT16 - Number of edges in the control flow graph: 11
+FT17 - Number of critical edges in the control flow graph: 0
+FT18 - Number of abnormal edges in the control flow graph: 0
+FT19 - Number of direct calls in the method: 2
+FT20 - Number of conditional branches in the method: 2
+FT21 - Number of assignment instructions in the method: 24
+FT22 - Number of unconditional branches in the method: 0
+FT25 - Number of instructions in the method: 30
+FT26 - Average of number of instructions in basic blocks: 3
+FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
+FT28 - Average of arguments for a phi-node: 0
+FT29 - Number of basic blocks with no phi nodes: 8
+FT30 - Number of basic blocks with phi nodes in the interval [0, 3]: 0
+FT31 - Number of basic blocks with more than 3 phi nodes: 0
+FT32 - Number of basic block where total number of arguments for all phi-nodes is in greater than 5: 0
+FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
+FT34 - Number of switch instructions in the method: 0
+FT35 - Number of unary operations in the method: 5
+FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
+FT42 - Number of binary operations with one of the operands an integer constant in the method: 8
+FT43 - Number of calls with pointers as arguments: 0
+FT44 - Number of calls with the number of arguments is greater than 4: 0
+FT45 - Number of calls that return a pointer: 2
+FT46 - Number of calls that return an integer: 0
+FT47 - Number of occurrences of integer constant zero: 2
+FT48 - Number of occurrences of 32-bit integer constants: 6
+FT49 - Number of occurrences of integer constant one: 4
+FT50 - Number of occurrences of 64-bit integer constants: 5
+FT51 - Number of references of local variables in the method: 20
+FT52 - Number of references (def/use) of static/extern variables in the method: 0
+FT53 - Number of local variables referred in the method: 20
+FT54 - Number of static/extern variables referred in the method: 0
+FT55 - Number of local variables that are pointers in the method: 6
+FT56 - Number of static/extern variables that are pointers in the method: 0
+
+
+Método zeromatrix
+
+FT01 - Number of basic blocks in the method: 7
+FT02 - Number of basic blocks with a single successor: 5
+FT03 - Number of basic blocks with two successors: 2
+FT04 - Number of basic blocks with more than two successors: 0
+FT05 - Number of basic blocks with a single predecessor: 5
+FT06 - Number of basic blocks with two predecessors: 2
+FT07 - Number of basic blocks with more than two predecessors: 0
+FT08 - Number of basic blocks with a single predecessor and a single successor: 5
+FT09 - Number of basic blocks with a single predecessor and two successors: 0
+FT10 - Number of basic blocks with a two predecessors and one successor: 0
+FT11 - Number of basic blocks with two successors and two predecessors: 2
+FT12 - Number of basic blocks with more than two successors and more than two predecessors: 0
+FT13 - Number of basic blocks with number of instructions less than 15: 7
+FT14 - Number of basic blocks with number of instructions in the interval [15, 500]: 0
+FT15 - Number of basic blocks with number of instructions greater than 500: 0
+FT16 - Number of edges in the control flow graph: 10
+FT17 - Number of critical edges in the control flow graph: 0
+FT18 - Number of abnormal edges in the control flow graph: 0
+FT19 - Number of direct calls in the method: 0
+FT20 - Number of conditional branches in the method: 2
+FT21 - Number of assignment instructions in the method: 12
+FT22 - Number of unconditional branches in the method: 0
+FT25 - Number of instructions in the method: 15
+FT26 - Average of number of instructions in basic blocks: 2
+FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
+FT28 - Average of arguments for a phi-node: 0
+FT29 - Number of basic blocks with no phi nodes: 7
+FT30 - Number of basic blocks with phi nodes in the interval [0, 3]: 0
+FT31 - Number of basic blocks with more than 3 phi nodes: 0
+FT32 - Number of basic block where total number of arguments for all phi-nodes is in greater than 5: 0
+FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
+FT34 - Number of switch instructions in the method: 0
+FT35 - Number of unary operations in the method: 2
+FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
+FT42 - Number of binary operations with one of the operands an integer constant in the method: 4
+FT43 - Number of calls with pointers as arguments: 0
+FT44 - Number of calls with the number of arguments is greater than 4: 0
+FT45 - Number of calls that return a pointer: 0
+FT46 - Number of calls that return an integer: 0
+FT47 - Number of occurrences of integer constant zero: 3
+FT48 - Number of occurrences of 32-bit integer constants: 5
+FT49 - Number of occurrences of integer constant one: 2
+FT50 - Number of occurrences of 64-bit integer constants: 2
+FT51 - Number of references of local variables in the method: 10
+FT52 - Number of references (def/use) of static/extern variables in the method: 0
+FT53 - Number of local variables referred in the method: 10
+FT54 - Number of static/extern variables referred in the method: 0
+FT55 - Number of local variables that are pointers in the method: 0
+FT56 - Number of static/extern variables that are pointers in the method: 0
+
+
+Método freematrix
+
+FT01 - Number of basic blocks in the method: 3
+FT02 - Number of basic blocks with a single successor: 2
+FT03 - Number of basic blocks with two successors: 1
+FT04 - Number of basic blocks with more than two successors: 0
+FT05 - Number of basic blocks with a single predecessor: 2
+FT06 - Number of basic blocks with two predecessors: 1
+FT07 - Number of basic blocks with more than two predecessors: 0
+FT08 - Number of basic blocks with a single predecessor and a single successor: 2
+FT09 - Number of basic blocks with a single predecessor and two successors: 0
+FT10 - Number of basic blocks with a two predecessors and one successor: 0
+FT11 - Number of basic blocks with two successors and two predecessors: 1
+FT12 - Number of basic blocks with more than two successors and more than two predecessors: 0
+FT13 - Number of basic blocks with number of instructions less than 15: 3
+FT14 - Number of basic blocks with number of instructions in the interval [15, 500]: 0
+FT15 - Number of basic blocks with number of instructions greater than 500: 0
+FT16 - Number of edges in the control flow graph: 5
+FT17 - Number of critical edges in the control flow graph: 0
+FT18 - Number of abnormal edges in the control flow graph: 0
+FT19 - Number of direct calls in the method: 2
+FT20 - Number of conditional branches in the method: 1
+FT21 - Number of assignment instructions in the method: 6
+FT22 - Number of unconditional branches in the method: 0
+FT25 - Number of instructions in the method: 10
+FT26 - Average of number of instructions in basic blocks: 3
+FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
+FT28 - Average of arguments for a phi-node: 0
+FT29 - Number of basic blocks with no phi nodes: 3
+FT30 - Number of basic blocks with phi nodes in the interval [0, 3]: 0
+FT31 - Number of basic blocks with more than 3 phi nodes: 0
+FT32 - Number of basic block where total number of arguments for all phi-nodes is in greater than 5: 0
+FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
+FT34 - Number of switch instructions in the method: 0
+FT35 - Number of unary operations in the method: 1
+FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
+FT42 - Number of binary operations with one of the operands an integer constant in the method: 2
+FT43 - Number of calls with pointers as arguments: 2
+FT44 - Number of calls with the number of arguments is greater than 4: 0
+FT45 - Number of calls that return a pointer: 0
+FT46 - Number of calls that return an integer: 0
+FT47 - Number of occurrences of integer constant zero: 2
+FT48 - Number of occurrences of 32-bit integer constants: 3
+FT49 - Number of occurrences of integer constant one: 0
+FT50 - Number of occurrences of 64-bit integer constants: 1
+FT51 - Number of references of local variables in the method: 2
+FT52 - Number of references (def/use) of static/extern variables in the method: 0
+FT53 - Number of local variables referred in the method: 2
+FT54 - Number of static/extern variables referred in the method: 0
+FT55 - Number of local variables that are pointers in the method: 0
+FT56 - Number of static/extern variables that are pointers in the method: 0
+
+
+Método mmult
+
+FT01 - Number of basic blocks in the method: 11
+FT02 - Number of basic blocks with a single successor: 8
+FT03 - Number of basic blocks with two successors: 3
+FT04 - Number of basic blocks with more than two successors: 0
+FT05 - Number of basic blocks with a single predecessor: 8
+FT06 - Number of basic blocks with two predecessors: 3
+FT07 - Number of basic blocks with more than two predecessors: 0
+FT08 - Number of basic blocks with a single predecessor and a single successor: 8
+FT09 - Number of basic blocks with a single predecessor and two successors: 0
+FT10 - Number of basic blocks with a two predecessors and one successor: 0
+FT11 - Number of basic blocks with two successors and two predecessors: 3
+FT12 - Number of basic blocks with more than two successors and more than two predecessors: 0
+FT13 - Number of basic blocks with number of instructions less than 15: 10
+FT14 - Number of basic blocks with number of instructions in the interval [15, 500]: 1
+FT15 - Number of basic blocks with number of instructions greater than 500: 0
+FT16 - Number of edges in the control flow graph: 15
+FT17 - Number of critical edges in the control flow graph: 0
+FT18 - Number of abnormal edges in the control flow graph: 0
+FT19 - Number of direct calls in the method: 0
+FT20 - Number of conditional branches in the method: 3
+FT21 - Number of assignment instructions in the method: 34
+FT22 - Number of unconditional branches in the method: 0
+FT25 - Number of instructions in the method: 39
+FT26 - Average of number of instructions in basic blocks: 3
+FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
+FT28 - Average of arguments for a phi-node: 0
+FT29 - Number of basic blocks with no phi nodes: 11
+FT30 - Number of basic blocks with phi nodes in the interval [0, 3]: 0
+FT31 - Number of basic blocks with more than 3 phi nodes: 0
+FT32 - Number of basic block where total number of arguments for all phi-nodes is in greater than 5: 0
+FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
+FT34 - Number of switch instructions in the method: 0
+FT35 - Number of unary operations in the method: 6
+FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
+FT42 - Number of binary operations with one of the operands an integer constant in the method: 9
+FT43 - Number of calls with pointers as arguments: 0
+FT44 - Number of calls with the number of arguments is greater than 4: 0
+FT45 - Number of calls that return a pointer: 0
+FT46 - Number of calls that return an integer: 0
+FT47 - Number of occurrences of integer constant zero: 4
+FT48 - Number of occurrences of 32-bit integer constants: 7
+FT49 - Number of occurrences of integer constant one: 3
+FT50 - Number of occurrences of 64-bit integer constants: 6
+FT51 - Number of references of local variables in the method: 24
+FT52 - Number of references (def/use) of static/extern variables in the method: 0
+FT53 - Number of local variables referred in the method: 24
+FT54 - Number of static/extern variables referred in the method: 0
+FT55 - Number of local variables that are pointers in the method: 2
+FT56 - Number of static/extern variables that are pointers in the method: 0
+
+
+Método main
+
+FT01 - Number of basic blocks in the method: 8
+FT02 - Number of basic blocks with a single successor: 6
+FT03 - Number of basic blocks with two successors: 2
+FT04 - Number of basic blocks with more than two successors: 0
+FT05 - Number of basic blocks with a single predecessor: 6
+FT06 - Number of basic blocks with two predecessors: 2
+FT07 - Number of basic blocks with more than two predecessors: 0
+FT08 - Number of basic blocks with a single predecessor and a single successor: 5
+FT09 - Number of basic blocks with a single predecessor and two successors: 1
+FT10 - Number of basic blocks with a two predecessors and one successor: 1
+FT11 - Number of basic blocks with two successors and two predecessors: 1
+FT12 - Number of basic blocks with more than two successors and more than two predecessors: 0
+FT13 - Number of basic blocks with number of instructions less than 15: 7
+FT14 - Number of basic blocks with number of instructions in the interval [15, 500]: 1
+FT15 - Number of basic blocks with number of instructions greater than 500: 0
+FT16 - Number of edges in the control flow graph: 11
+FT17 - Number of critical edges in the control flow graph: 0
+FT18 - Number of abnormal edges in the control flow graph: 0
+FT19 - Number of direct calls in the method: 9
+FT20 - Number of conditional branches in the method: 2
+FT21 - Number of assignment instructions in the method: 21
+FT22 - Number of unconditional branches in the method: 0
+FT25 - Number of instructions in the method: 34
+FT26 - Average of number of instructions in basic blocks: 4
+FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
+FT28 - Average of arguments for a phi-node: 0
+FT29 - Number of basic blocks with no phi nodes: 8
+FT30 - Number of basic blocks with phi nodes in the interval [0, 3]: 0
+FT31 - Number of basic blocks with more than 3 phi nodes: 0
+FT32 - Number of basic block where total number of arguments for all phi-nodes is in greater than 5: 0
+FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
+FT34 - Number of switch instructions in the method: 0
+FT35 - Number of unary operations in the method: 0
+FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
+FT42 - Number of binary operations with one of the operands an integer constant in the method: 8
+FT43 - Number of calls with pointers as arguments: 6
+FT44 - Number of calls with the number of arguments is greater than 4: 2
+FT45 - Number of calls that return a pointer: 4
+FT46 - Number of calls that return an integer: 2
+FT47 - Number of occurrences of integer constant zero: 2
+FT48 - Number of occurrences of 32-bit integer constants: 16
+FT49 - Number of occurrences of integer constant one: 1
+FT50 - Number of occurrences of 64-bit integer constants: 7
+FT51 - Number of references of local variables in the method: 24
+FT52 - Number of references (def/use) of static/extern variables in the method: 0
+FT53 - Number of local variables referred in the method: 24
+FT54 - Number of static/extern variables referred in the method: 0
+FT55 - Number of local variables that are pointers in the method: 13
+FT56 - Number of static/extern variables that are pointers in the method: 0
+
+
+Método Program
+
+FT01 - Number of basic blocks in the method: 37
+FT02 - Number of basic blocks with a single successor: 27
+FT03 - Number of basic blocks with two successors: 10
+FT04 - Number of basic blocks with more than two successors: 0
+FT05 - Number of basic blocks with a single predecessor: 27
+FT06 - Number of basic blocks with two predecessors: 10
+FT07 - Number of basic blocks with more than two predecessors: 0
+FT08 - Number of basic blocks with a single predecessor and a single successor: 26
+FT09 - Number of basic blocks with a single predecessor and two successors: 1
+FT10 - Number of basic blocks with a two predecessors and one successor: 1
+FT11 - Number of basic blocks with two successors and two predecessors: 9
+FT12 - Number of basic blocks with more than two successors and more than two predecessors: 0
+FT13 - Number of basic blocks with number of instructions less than 15: 35
+FT14 - Number of basic blocks with number of instructions in the interval [15, 500]: 2
+FT15 - Number of basic blocks with number of instructions greater than 500: 0
+FT16 - Number of edges in the control flow graph: 52
+FT17 - Number of critical edges in the control flow graph: 0
+FT18 - Number of abnormal edges in the control flow graph: 0
+FT19 - Number of direct calls in the method: 13
+FT20 - Number of conditional branches in the method: 10
+FT21 - Number of assignment instructions in the method: 97
+FT22 - Number of unconditional branches in the method: 0
+FT25 - Number of instructions in the method: 128
+FT26 - Average of number of instructions in basic blocks: 15
+FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
+FT28 - Average of arguments for a phi-node: 0
+FT29 - Number of basic blocks with no phi nodes: 37
+FT30 - Number of basic blocks with phi nodes in the interval [0, 3]: 0
+FT31 - Number of basic blocks with more than 3 phi nodes: 0
+FT32 - Number of basic block where total number of arguments for all phi-nodes is in greater than 5: 0
+FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
+FT34 - Number of switch instructions in the method: 0
+FT35 - Number of unary operations in the method: 14
+FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
+FT42 - Number of binary operations with one of the operands an integer constant in the method: 31
+FT43 - Number of calls with pointers as arguments: 8
+FT44 - Number of calls with the number of arguments is greater than 4: 2
+FT45 - Number of calls that return a pointer: 6
+FT46 - Number of calls that return an integer: 2
+FT47 - Number of occurrences of integer constant zero: 13
+FT48 - Number of occurrences of 32-bit integer constants: 37
+FT49 - Number of occurrences of integer constant one: 10
+FT50 - Number of occurrences of 64-bit integer constants: 21
+FT51 - Number of references of local variables in the method: 80
+FT52 - Number of references (def/use) of static/extern variables in the method: 0
+FT53 - Number of local variables referred in the method: 80
+FT54 - Number of static/extern variables referred in the method: 0
+FT55 - Number of local variables that are pointers in the method: 21
+FT56 - Number of static/extern variables that are pointers in the method: 0
