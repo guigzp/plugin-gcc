@@ -24,6 +24,8 @@ FT19 - Number of direct calls in the method: 1
 FT20 - Number of conditional branches in the method: 1
 FT21 - Number of assignment instructions in the method: 3
 FT22 - Number of unconditional branches in the method: 0
+FT23 - Number of binary integer operations in the method: 1
+FT24 - Number of binary floating point operations in the method: 0
 FT25 - Number of instructions in the method: 7
 FT26 - Average of number of instructions in basic blocks: 1
 FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
@@ -35,6 +37,11 @@ FT32 - Number of basic block where total number of arguments for all phi-nodes i
 FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
 FT34 - Number of switch instructions in the method: 0
 FT35 - Number of unary operations in the method: 0
+FT36 - Number of instruction that do pointer arithmetic in the method: 1
+FT37 - Number of indirect references via pointers (* in C): 0
+FT38 - Number of times the address of a variables is taken (& in C): 0
+FT39 - Number of times the address of a function is taken (& in C): 0
+FT40 - Number of indirect calls (i.e. done via pointers) in the method: 0
 FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
 FT42 - Number of binary operations with one of the operands an integer constant in the method: 1
 FT43 - Number of calls with pointers as arguments: 1
@@ -77,6 +84,8 @@ FT19 - Number of direct calls in the method: 33
 FT20 - Number of conditional branches in the method: 20
 FT21 - Number of assignment instructions in the method: 126
 FT22 - Number of unconditional branches in the method: 0
+FT23 - Number of binary integer operations in the method: 17
+FT24 - Number of binary floating point operations in the method: 26
 FT25 - Number of instructions in the method: 186
 FT26 - Average of number of instructions in basic blocks: 3
 FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
@@ -88,6 +97,11 @@ FT32 - Number of basic block where total number of arguments for all phi-nodes i
 FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
 FT34 - Number of switch instructions in the method: 1
 FT35 - Number of unary operations in the method: 20
+FT36 - Number of instruction that do pointer arithmetic in the method: 7
+FT37 - Number of indirect references via pointers (* in C): 0
+FT38 - Number of times the address of a variables is taken (& in C): 0
+FT39 - Number of times the address of a function is taken (& in C): 0
+FT40 - Number of indirect calls (i.e. done via pointers) in the method: 0
 FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
 FT42 - Number of binary operations with one of the operands an integer constant in the method: 12
 FT43 - Number of calls with pointers as arguments: 27
@@ -130,6 +144,8 @@ FT19 - Number of direct calls in the method: 39
 FT20 - Number of conditional branches in the method: 7
 FT21 - Number of assignment instructions in the method: 152
 FT22 - Number of unconditional branches in the method: 0
+FT23 - Number of binary integer operations in the method: 40
+FT24 - Number of binary floating point operations in the method: 1
 FT25 - Number of instructions in the method: 199
 FT26 - Average of number of instructions in basic blocks: 11
 FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
@@ -141,6 +157,11 @@ FT32 - Number of basic block where total number of arguments for all phi-nodes i
 FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
 FT34 - Number of switch instructions in the method: 0
 FT35 - Number of unary operations in the method: 29
+FT36 - Number of instruction that do pointer arithmetic in the method: 7
+FT37 - Number of indirect references via pointers (* in C): 0
+FT38 - Number of times the address of a variables is taken (& in C): 0
+FT39 - Number of times the address of a function is taken (& in C): 0
+FT40 - Number of indirect calls (i.e. done via pointers) in the method: 0
 FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
 FT42 - Number of binary operations with one of the operands an integer constant in the method: 25
 FT43 - Number of calls with pointers as arguments: 21
@@ -183,6 +204,8 @@ FT19 - Number of direct calls in the method: 1
 FT20 - Number of conditional branches in the method: 30
 FT21 - Number of assignment instructions in the method: 213
 FT22 - Number of unconditional branches in the method: 0
+FT23 - Number of binary integer operations in the method: 66
+FT24 - Number of binary floating point operations in the method: 0
 FT25 - Number of instructions in the method: 245
 FT26 - Average of number of instructions in basic blocks: 4
 FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
@@ -194,6 +217,11 @@ FT32 - Number of basic block where total number of arguments for all phi-nodes i
 FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
 FT34 - Number of switch instructions in the method: 0
 FT35 - Number of unary operations in the method: 31
+FT36 - Number of instruction that do pointer arithmetic in the method: 29
+FT37 - Number of indirect references via pointers (* in C): 0
+FT38 - Number of times the address of a variables is taken (& in C): 0
+FT39 - Number of times the address of a function is taken (& in C): 0
+FT40 - Number of indirect calls (i.e. done via pointers) in the method: 0
 FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
 FT42 - Number of binary operations with one of the operands an integer constant in the method: 32
 FT43 - Number of calls with pointers as arguments: 0
@@ -236,6 +264,8 @@ FT19 - Number of direct calls in the method: 1
 FT20 - Number of conditional branches in the method: 130
 FT21 - Number of assignment instructions in the method: 832
 FT22 - Number of unconditional branches in the method: 0
+FT23 - Number of binary integer operations in the method: 242
+FT24 - Number of binary floating point operations in the method: 0
 FT25 - Number of instructions in the method: 964
 FT26 - Average of number of instructions in basic blocks: 4
 FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
@@ -247,6 +277,11 @@ FT32 - Number of basic block where total number of arguments for all phi-nodes i
 FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
 FT34 - Number of switch instructions in the method: 0
 FT35 - Number of unary operations in the method: 111
+FT36 - Number of instruction that do pointer arithmetic in the method: 107
+FT37 - Number of indirect references via pointers (* in C): 0
+FT38 - Number of times the address of a variables is taken (& in C): 0
+FT39 - Number of times the address of a function is taken (& in C): 0
+FT40 - Number of indirect calls (i.e. done via pointers) in the method: 0
 FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
 FT42 - Number of binary operations with one of the operands an integer constant in the method: 120
 FT43 - Number of calls with pointers as arguments: 0
@@ -289,6 +324,8 @@ FT19 - Number of direct calls in the method: 1
 FT20 - Number of conditional branches in the method: 30
 FT21 - Number of assignment instructions in the method: 222
 FT22 - Number of unconditional branches in the method: 0
+FT23 - Number of binary integer operations in the method: 69
+FT24 - Number of binary floating point operations in the method: 0
 FT25 - Number of instructions in the method: 254
 FT26 - Average of number of instructions in basic blocks: 4
 FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
@@ -300,6 +337,11 @@ FT32 - Number of basic block where total number of arguments for all phi-nodes i
 FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
 FT34 - Number of switch instructions in the method: 0
 FT35 - Number of unary operations in the method: 31
+FT36 - Number of instruction that do pointer arithmetic in the method: 29
+FT37 - Number of indirect references via pointers (* in C): 0
+FT38 - Number of times the address of a variables is taken (& in C): 0
+FT39 - Number of times the address of a function is taken (& in C): 0
+FT40 - Number of indirect calls (i.e. done via pointers) in the method: 0
 FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
 FT42 - Number of binary operations with one of the operands an integer constant in the method: 35
 FT43 - Number of calls with pointers as arguments: 0
@@ -342,6 +384,8 @@ FT19 - Number of direct calls in the method: 0
 FT20 - Number of conditional branches in the method: 18
 FT21 - Number of assignment instructions in the method: 105
 FT22 - Number of unconditional branches in the method: 0
+FT23 - Number of binary integer operations in the method: 11
+FT24 - Number of binary floating point operations in the method: 0
 FT25 - Number of instructions in the method: 127
 FT26 - Average of number of instructions in basic blocks: 3
 FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
@@ -353,6 +397,11 @@ FT32 - Number of basic block where total number of arguments for all phi-nodes i
 FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
 FT34 - Number of switch instructions in the method: 0
 FT35 - Number of unary operations in the method: 4
+FT36 - Number of instruction that do pointer arithmetic in the method: 4
+FT37 - Number of indirect references via pointers (* in C): 0
+FT38 - Number of times the address of a variables is taken (& in C): 0
+FT39 - Number of times the address of a function is taken (& in C): 0
+FT40 - Number of indirect calls (i.e. done via pointers) in the method: 0
 FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
 FT42 - Number of binary operations with one of the operands an integer constant in the method: 7
 FT43 - Number of calls with pointers as arguments: 0
@@ -395,6 +444,8 @@ FT19 - Number of direct calls in the method: 0
 FT20 - Number of conditional branches in the method: 4
 FT21 - Number of assignment instructions in the method: 51
 FT22 - Number of unconditional branches in the method: 0
+FT23 - Number of binary integer operations in the method: 14
+FT24 - Number of binary floating point operations in the method: 0
 FT25 - Number of instructions in the method: 57
 FT26 - Average of number of instructions in basic blocks: 5
 FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
@@ -406,6 +457,11 @@ FT32 - Number of basic block where total number of arguments for all phi-nodes i
 FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
 FT34 - Number of switch instructions in the method: 0
 FT35 - Number of unary operations in the method: 6
+FT36 - Number of instruction that do pointer arithmetic in the method: 6
+FT37 - Number of indirect references via pointers (* in C): 0
+FT38 - Number of times the address of a variables is taken (& in C): 0
+FT39 - Number of times the address of a function is taken (& in C): 0
+FT40 - Number of indirect calls (i.e. done via pointers) in the method: 0
 FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
 FT42 - Number of binary operations with one of the operands an integer constant in the method: 8
 FT43 - Number of calls with pointers as arguments: 0
@@ -448,6 +504,8 @@ FT19 - Number of direct calls in the method: 0
 FT20 - Number of conditional branches in the method: 10
 FT21 - Number of assignment instructions in the method: 34
 FT22 - Number of unconditional branches in the method: 0
+FT23 - Number of binary integer operations in the method: 5
+FT24 - Number of binary floating point operations in the method: 0
 FT25 - Number of instructions in the method: 48
 FT26 - Average of number of instructions in basic blocks: 2
 FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
@@ -459,6 +517,11 @@ FT32 - Number of basic block where total number of arguments for all phi-nodes i
 FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
 FT34 - Number of switch instructions in the method: 0
 FT35 - Number of unary operations in the method: 1
+FT36 - Number of instruction that do pointer arithmetic in the method: 1
+FT37 - Number of indirect references via pointers (* in C): 0
+FT38 - Number of times the address of a variables is taken (& in C): 0
+FT39 - Number of times the address of a function is taken (& in C): 0
+FT40 - Number of indirect calls (i.e. done via pointers) in the method: 0
 FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
 FT42 - Number of binary operations with one of the operands an integer constant in the method: 4
 FT43 - Number of calls with pointers as arguments: 0
@@ -501,6 +564,8 @@ FT19 - Number of direct calls in the method: 5
 FT20 - Number of conditional branches in the method: 54
 FT21 - Number of assignment instructions in the method: 611
 FT22 - Number of unconditional branches in the method: 0
+FT23 - Number of binary integer operations in the method: 209
+FT24 - Number of binary floating point operations in the method: 0
 FT25 - Number of instructions in the method: 675
 FT26 - Average of number of instructions in basic blocks: 5
 FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
@@ -512,6 +577,11 @@ FT32 - Number of basic block where total number of arguments for all phi-nodes i
 FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
 FT34 - Number of switch instructions in the method: 0
 FT35 - Number of unary operations in the method: 56
+FT36 - Number of instruction that do pointer arithmetic in the method: 72
+FT37 - Number of indirect references via pointers (* in C): 0
+FT38 - Number of times the address of a variables is taken (& in C): 0
+FT39 - Number of times the address of a function is taken (& in C): 0
+FT40 - Number of indirect calls (i.e. done via pointers) in the method: 0
 FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
 FT42 - Number of binary operations with one of the operands an integer constant in the method: 99
 FT43 - Number of calls with pointers as arguments: 4
@@ -554,6 +624,8 @@ FT19 - Number of direct calls in the method: 4
 FT20 - Number of conditional branches in the method: 20
 FT21 - Number of assignment instructions in the method: 80
 FT22 - Number of unconditional branches in the method: 0
+FT23 - Number of binary integer operations in the method: 28
+FT24 - Number of binary floating point operations in the method: 0
 FT25 - Number of instructions in the method: 105
 FT26 - Average of number of instructions in basic blocks: 3
 FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
@@ -565,6 +637,11 @@ FT32 - Number of basic block where total number of arguments for all phi-nodes i
 FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
 FT34 - Number of switch instructions in the method: 0
 FT35 - Number of unary operations in the method: 4
+FT36 - Number of instruction that do pointer arithmetic in the method: 18
+FT37 - Number of indirect references via pointers (* in C): 0
+FT38 - Number of times the address of a variables is taken (& in C): 0
+FT39 - Number of times the address of a function is taken (& in C): 0
+FT40 - Number of indirect calls (i.e. done via pointers) in the method: 0
 FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
 FT42 - Number of binary operations with one of the operands an integer constant in the method: 22
 FT43 - Number of calls with pointers as arguments: 4
@@ -607,6 +684,8 @@ FT19 - Number of direct calls in the method: 2
 FT20 - Number of conditional branches in the method: 0
 FT21 - Number of assignment instructions in the method: 1
 FT22 - Number of unconditional branches in the method: 0
+FT23 - Number of binary integer operations in the method: 0
+FT24 - Number of binary floating point operations in the method: 0
 FT25 - Number of instructions in the method: 3
 FT26 - Average of number of instructions in basic blocks: 3
 FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
@@ -618,6 +697,11 @@ FT32 - Number of basic block where total number of arguments for all phi-nodes i
 FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
 FT34 - Number of switch instructions in the method: 0
 FT35 - Number of unary operations in the method: 0
+FT36 - Number of instruction that do pointer arithmetic in the method: 0
+FT37 - Number of indirect references via pointers (* in C): 0
+FT38 - Number of times the address of a variables is taken (& in C): 0
+FT39 - Number of times the address of a function is taken (& in C): 0
+FT40 - Number of indirect calls (i.e. done via pointers) in the method: 0
 FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
 FT42 - Number of binary operations with one of the operands an integer constant in the method: 0
 FT43 - Number of calls with pointers as arguments: 1
@@ -660,6 +744,8 @@ FT19 - Number of direct calls in the method: 3
 FT20 - Number of conditional branches in the method: 0
 FT21 - Number of assignment instructions in the method: 2
 FT22 - Number of unconditional branches in the method: 0
+FT23 - Number of binary integer operations in the method: 0
+FT24 - Number of binary floating point operations in the method: 0
 FT25 - Number of instructions in the method: 5
 FT26 - Average of number of instructions in basic blocks: 5
 FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
@@ -671,6 +757,11 @@ FT32 - Number of basic block where total number of arguments for all phi-nodes i
 FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
 FT34 - Number of switch instructions in the method: 0
 FT35 - Number of unary operations in the method: 0
+FT36 - Number of instruction that do pointer arithmetic in the method: 0
+FT37 - Number of indirect references via pointers (* in C): 0
+FT38 - Number of times the address of a variables is taken (& in C): 0
+FT39 - Number of times the address of a function is taken (& in C): 0
+FT40 - Number of indirect calls (i.e. done via pointers) in the method: 0
 FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
 FT42 - Number of binary operations with one of the operands an integer constant in the method: 0
 FT43 - Number of calls with pointers as arguments: 2
@@ -713,6 +804,8 @@ FT19 - Number of direct calls in the method: 2
 FT20 - Number of conditional branches in the method: 1
 FT21 - Number of assignment instructions in the method: 1
 FT22 - Number of unconditional branches in the method: 0
+FT23 - Number of binary integer operations in the method: 0
+FT24 - Number of binary floating point operations in the method: 0
 FT25 - Number of instructions in the method: 6
 FT26 - Average of number of instructions in basic blocks: 1
 FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
@@ -724,6 +817,11 @@ FT32 - Number of basic block where total number of arguments for all phi-nodes i
 FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
 FT34 - Number of switch instructions in the method: 0
 FT35 - Number of unary operations in the method: 0
+FT36 - Number of instruction that do pointer arithmetic in the method: 0
+FT37 - Number of indirect references via pointers (* in C): 0
+FT38 - Number of times the address of a variables is taken (& in C): 0
+FT39 - Number of times the address of a function is taken (& in C): 0
+FT40 - Number of indirect calls (i.e. done via pointers) in the method: 0
 FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
 FT42 - Number of binary operations with one of the operands an integer constant in the method: 0
 FT43 - Number of calls with pointers as arguments: 2
@@ -766,6 +864,8 @@ FT19 - Number of direct calls in the method: 92
 FT20 - Number of conditional branches in the method: 325
 FT21 - Number of assignment instructions in the method: 2433
 FT22 - Number of unconditional branches in the method: 0
+FT23 - Number of binary integer operations in the method: 702
+FT24 - Number of binary floating point operations in the method: 27
 FT25 - Number of instructions in the method: 2881
 FT26 - Average of number of instructions in basic blocks: 54
 FT27 - Average of number of phi-nodes at the beginning of a basic block: 0
@@ -777,6 +877,11 @@ FT32 - Number of basic block where total number of arguments for all phi-nodes i
 FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: 0
 FT34 - Number of switch instructions in the method: 1
 FT35 - Number of unary operations in the method: 293
+FT36 - Number of instruction that do pointer arithmetic in the method: 281
+FT37 - Number of indirect references via pointers (* in C): 0
+FT38 - Number of times the address of a variables is taken (& in C): 0
+FT39 - Number of times the address of a function is taken (& in C): 0
+FT40 - Number of indirect calls (i.e. done via pointers) in the method: 0
 FT41 - Number of assignment instructions with the left operand an integer constant in the method: 0
 FT42 - Number of binary operations with one of the operands an integer constant in the method: 365
 FT43 - Number of calls with pointers as arguments: 62

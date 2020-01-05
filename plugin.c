@@ -40,8 +40,8 @@ void print_results(int features[], const char *name)
 	printf("FT20 - Number of conditional branches in the method: %d\n", features[20]);
 	printf("FT21 - Number of assignment instructions in the method: %d\n", features[21]);
 	printf("FT22 - Number of unconditional branches in the method: %d\n", features[22]);
-	// printf("FT23 - Number of binary integer operations in the method: %d\n", features[23]);
-	// printf("FT24 - Number of binary floating point operations in the method: %d\n", features[24]);
+	printf("FT23 - Number of binary integer operations in the method: %d\n", features[23]);
+	printf("FT24 - Number of binary floating point operations in the method: %d\n", features[24]);
 	printf("FT25 - Number of instructions in the method: %d\n", features[25]);
 	printf("FT26 - Average of number of instructions in basic blocks: %d\n", features[26]);
 	printf("FT27 - Average of number of phi-nodes at the beginning of a basic block: %d\n", features[27]);
@@ -53,11 +53,11 @@ void print_results(int features[], const char *name)
 	printf("FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: %d\n", features[33]);
 	printf("FT34 - Number of switch instructions in the method: %d\n", features[34]);
 	printf("FT35 - Number of unary operations in the method: %d\n", features[35]);
-	// printf("FT36 - Number of instruction that do pointer arithmetic in the method: %d\n", features[36]);
-	// printf("FT37 - Number of indirect references via pointers (* in C): %d\n", features[37]);
-	// printf("FT38 - Number of times the address of a variables is taken (& in C): %d\n", features[38]);
-	// printf("FT39 - Number of times the address of a function is taken (& in C): %d\n", features[39]);
-	// printf("FT40 - Number of indirect calls (i.e. done via pointers) in the method: %d\n", features[40]);
+	printf("FT36 - Number of instruction that do pointer arithmetic in the method: %d\n", features[36]);
+	printf("FT37 - Number of indirect references via pointers (* in C): %d\n", features[37]);
+	printf("FT38 - Number of times the address of a variables is taken (& in C): %d\n", features[38]);
+	printf("FT39 - Number of times the address of a function is taken (& in C): %d\n", features[39]);
+	printf("FT40 - Number of indirect calls (i.e. done via pointers) in the method: %d\n", features[40]);
 	printf("FT41 - Number of assignment instructions with the left operand an integer constant in the method: %d\n", features[41]);
 	printf("FT42 - Number of binary operations with one of the operands an integer constant in the method: %d\n", features[42]);
 	printf("FT43 - Number of calls with pointers as arguments: %d\n", features[43]);
@@ -148,6 +148,10 @@ struct plugin_features : gimple_opt_pass
 				if (get_gimple_rhs_class(gimple_expr_code(stmt)) == GIMPLE_UNARY_RHS)
 				{
 					features[35]++;
+					if (gimple_expr_code(stmt) == INDIRECT_REF)
+					{
+						features[37]++;
+					}
 				}
 
 				for (int i = 0; i < ops; i++)
@@ -155,9 +159,6 @@ struct plugin_features : gimple_opt_pass
 					tree node = gimple_op(stmt, i);
 					if (node != NULL)
 					{
-						// printf("Codigo: %s - %d\n", get_tree_code_name(TREE_CODE(node)), TREE_CODE(node));
-						// printf("Tipo: %s\n", get_tree_code_name(TREE_CODE(TREE_TYPE(node))));
-						// printf("Tamanho: %d\n", TYPE_PRECISION(TREE_TYPE(node)));
 
 						if (TREE_CODE(node) == VAR_DECL)
 						{
@@ -255,6 +256,26 @@ struct plugin_features : gimple_opt_pass
 						if ((rhs1 && (TREE_CODE(rhs1) == INTEGER_CST)) || (rhs2 && (TREE_CODE(rhs2) == INTEGER_CST)) || (rhs3 && (TREE_CODE(rhs3) == INTEGER_CST)))
 						{
 							features[42]++;
+						}
+
+						if ((rhs1 && (TREE_CODE(TREE_TYPE(rhs1)) == POINTER_TYPE)) || (rhs2 && (TREE_CODE(TREE_TYPE(rhs2)) == POINTER_TYPE)) || (rhs3 && (TREE_CODE(TREE_TYPE(rhs3)) == POINTER_TYPE)))
+						{
+							features[36]++;
+						}
+
+						if ((rhs1 && (TREE_CODE(TREE_TYPE(rhs1)) == INTEGER_TYPE)) || (rhs2 && (TREE_CODE(TREE_TYPE(rhs2)) == INTEGER_TYPE)) || (rhs3 && (TREE_CODE(TREE_TYPE(rhs3)) == INTEGER_TYPE)))
+						{
+							features[23]++;
+						}
+
+						if ((rhs1 && (TREE_CODE(TREE_TYPE(rhs1)) == REAL_TYPE)) || (rhs2 && (TREE_CODE(TREE_TYPE(rhs2)) == REAL_TYPE)) || (rhs3 && (TREE_CODE(TREE_TYPE(rhs3)) == REAL_TYPE)))
+						{
+							features[24]++;
+						}
+
+						if ((rhs1 && (FUNCTION_POINTER_TYPE_P(TREE_TYPE(rhs1)) == POINTER_TYPE)) || (rhs2 && (FUNCTION_POINTER_TYPE_P(TREE_TYPE(rhs2)) == POINTER_TYPE)) || (rhs3 && (FUNCTION_POINTER_TYPE_P(TREE_TYPE(rhs3)) == POINTER_TYPE)))
+						{
+							features[39]++;
 						}
 					}
 					break;
