@@ -10,83 +10,85 @@
 #include "gimple-pretty-print.h"
 #include "gimple-iterator.h"
 
-#include <vector>
-#include <iostream>
-
 int plugin_is_GPL_compatible;
 
-std::vector<int> features(57);
-std::vector<int> features_sum(57);
+int features[57];
+int features_sum[57];
 
-void print_results(std::vector<int> features, const char *name)
+void print_results(int features[], const char *name)
 {
-	std::cout << std::endl
-			  << name << std::endl
-			  << std::endl;
-	std::cout << "FT01 - Number of basic blocks in the method: " << features[1] << std::endl;
-	std::cout << "FT02 - Number of basic blocks with a single successor: " << features[2] << std::endl;
-	std::cout << "FT03 - Number of basic blocks with two successors: " << features[3] << std::endl;
-	std::cout << "FT04 - Number of basic blocks with more than two successors: " << features[4] << std::endl;
-	std::cout << "FT05 - Number of basic blocks with a single predecessor: " << features[5] << std::endl;
-	std::cout << "FT06 - Number of basic blocks with two predecessors: " << features[6] << std::endl;
-	std::cout << "FT07 - Number of basic blocks with more than two predecessors: " << features[7] << std::endl;
-	std::cout << "FT08 - Number of basic blocks with a single predecessor and a single successor: " << features[8] << std::endl;
-	std::cout << "FT09 - Number of basic blocks with a single predecessor and two successors: " << features[9] << std::endl;
-	std::cout << "FT10 - Number of basic blocks with a two predecessors and one successor: " << features[10] << std::endl;
-	std::cout << "FT11 - Number of basic blocks with two successors and two predecessors: " << features[11] << std::endl;
-	std::cout << "FT12 - Number of basic blocks with more than two successors and more than two predecessors: " << features[12] << std::endl;
-	std::cout << "FT13 - Number of basic blocks with number of instructions less than 15: " << features[13] << std::endl;
-	std::cout << "FT14 - Number of basic blocks with number of instructions in the interval [15, 500]: " << features[14] << std::endl;
-	std::cout << "FT15 - Number of basic blocks with number of instructions greater than 500: " << features[15] << std::endl;
-	std::cout << "FT16 - Number of edges in the control flow graph: " << features[16] << std::endl;
-	std::cout << "FT17 - Number of critical edges in the control flow graph: " << features[17] << std::endl;
-	std::cout << "FT18 - Number of abnormal edges in the control flow graph: " << features[18] << std::endl;
-	std::cout << "FT19 - Number of direct calls in the method: " << features[19] << std::endl;
-	std::cout << "FT20 - Number of conditional branches in the method: " << features[20] << std::endl;
-	std::cout << "FT21 - Number of assignment instructions in the method: " << features[21] << std::endl;
-	std::cout << "FT22 - Number of unconditional branches in the method: " << features[22] << std::endl;
-	// std::cout << "FT23 - Number of binary integer operations in the method: " << features[23] << std::endl;
-	// std::cout << "FT24 - Number of binary floating point operations in the method: " << features[24] << std::endl;
-	std::cout << "FT25 - Number of instructions in the method: " << features[25] << std::endl;
-	std::cout << "FT26 - Average of number of instructions in basic blocks: " << features[26] << std::endl;
-	std::cout << "FT27 - Average of number of phi-nodes at the beginning of a basic block: " << features[27] << std::endl;
-	std::cout << "FT28 - Average of arguments for a phi-node: " << features[28] << std::endl;
-	std::cout << "FT29 - Number of basic blocks with no phi nodes: " << features[29] << std::endl;
-	std::cout << "FT30 - Number of basic blocks with phi nodes in the interval [0, 3]: " << features[30] << std::endl;
-	std::cout << "FT31 - Number of basic blocks with more than 3 phi nodes: " << features[31] << std::endl;
-	std::cout << "FT32 - Number of basic block where total number of arguments for all phi-nodes is in greater than 5: " << features[32] << std::endl;
-	std::cout << "FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: " << features[33] << std::endl;
-	std::cout << "FT34 - Number of switch instructions in the method: " << features[34] << std::endl;
-	std::cout << "FT35 - Number of unary operations in the method: " << features[35] << std::endl;
-	// std::cout << "FT36 - Number of instruction that do pointer arithmetic in the method: " << features[36] << std::endl;
-	// std::cout << "FT37 - Number of indirect references via pointers (* in C): " << features[37] << std::endl;
-	// std::cout << "FT38 - Number of times the address of a variables is taken (& in C): " << features[38] << std::endl;
-	// std::cout << "FT39 - Number of times the address of a function is taken (& in C): " << features[39] << std::endl;
-	// std::cout << "FT40 - Number of indirect calls (i.e. done via pointers) in the method: " << features[40] << std::endl;
-	std::cout << "FT41 - Number of assignment instructions with the left operand an integer constant in the method: " << features[41] << std::endl;
-	std::cout << "FT42 - Number of binary operations with one of the operands an integer constant in the method: " << features[42] << std::endl;
-	std::cout << "FT43 - Number of calls with pointers as arguments: " << features[43] << std::endl;
-	std::cout << "FT44 - Number of calls with the number of arguments is greater than 4: " << features[44] << std::endl;
-	std::cout << "FT45 - Number of calls that return a pointer: " << features[45] << std::endl;
-	std::cout << "FT46 - Number of calls that return an integer: " << features[46] << std::endl;
-	std::cout << "FT47 - Number of occurrences of integer constant zero: " << features[47] << std::endl;
-	std::cout << "FT48 - Number of occurrences of 32-bit integer constants: " << features[48] << std::endl;
-	std::cout << "FT49 - Number of occurrences of integer constant one: " << features[49] << std::endl;
-	std::cout << "FT50 - Number of occurrences of 64-bit integer constants: " << features[50] << std::endl;
-	std::cout << "FT51 - Number of references of local variables in the method: " << features[51] << std::endl;
-	std::cout << "FT52 - Number of references (def/use) of static/extern variables in the method: " << features[52] << std::endl;
-	std::cout << "FT53 - Number of local variables referred in the method: " << features[53] << std::endl;
-	std::cout << "FT54 - Number of static/extern variables referred in the method: " << features[54] << std::endl;
-	std::cout << "FT55 - Number of local variables that are pointers in the method: " << features[55] << std::endl;
-	std::cout << "FT56 - Number of static/extern variables that are pointers in the method: " << features[56] << std::endl;
+	printf("\n\nMétodo %s\n\n", name);
+	printf("FT01 - Number of basic blocks in the method: %d\n", features[1]);
+	printf("FT02 - Number of basic blocks with a single successor: %d\n", features[2]);
+	printf("FT03 - Number of basic blocks with two successors: %d\n", features[3]);
+	printf("FT04 - Number of basic blocks with more than two successors: %d\n", features[4]);
+	printf("FT05 - Number of basic blocks with a single predecessor: %d\n", features[5]);
+	printf("FT06 - Number of basic blocks with two predecessors: %d\n", features[6]);
+	printf("FT07 - Number of basic blocks with more than two predecessors: %d\n", features[7]);
+	printf("FT08 - Number of basic blocks with a single predecessor and a single successor: %d\n", features[8]);
+	printf("FT09 - Number of basic blocks with a single predecessor and two successors: %d\n", features[9]);
+	printf("FT10 - Number of basic blocks with a two predecessors and one successor: %d\n", features[10]);
+	printf("FT11 - Number of basic blocks with two successors and two predecessors: %d\n", features[11]);
+	printf("FT12 - Number of basic blocks with more than two successors and more than two predecessors: %d\n", features[12]);
+	printf("FT13 - Number of basic blocks with number of instructions less than 15: %d\n", features[13]);
+	printf("FT14 - Number of basic blocks with number of instructions in the interval [15, 500]: %d\n", features[14]);
+	printf("FT15 - Number of basic blocks with number of instructions greater than 500: %d\n", features[15]);
+	printf("FT16 - Number of edges in the control flow graph: %d\n", features[16]);
+	printf("FT17 - Number of critical edges in the control flow graph: %d\n", features[17]);
+	printf("FT18 - Number of abnormal edges in the control flow graph: %d\n", features[18]);
+	printf("FT19 - Number of direct calls in the method: %d\n", features[19]);
+	printf("FT20 - Number of conditional branches in the method: %d\n", features[20]);
+	printf("FT21 - Number of assignment instructions in the method: %d\n", features[21]);
+	printf("FT22 - Number of unconditional branches in the method: %d\n", features[22]);
+	// printf("FT23 - Number of binary integer operations in the method: %d\n", features[23]);
+	// printf("FT24 - Number of binary floating point operations in the method: %d\n", features[24]);
+	printf("FT25 - Number of instructions in the method: %d\n", features[25]);
+	printf("FT26 - Average of number of instructions in basic blocks: %d\n", features[26]);
+	printf("FT27 - Average of number of phi-nodes at the beginning of a basic block: %d\n", features[27]);
+	printf("FT28 - Average of arguments for a phi-node: %d\n", features[28]);
+	printf("FT29 - Number of basic blocks with no phi nodes: %d\n", features[29]);
+	printf("FT30 - Number of basic blocks with phi nodes in the interval [0, 3]: %d\n", features[30]);
+	printf("FT31 - Number of basic blocks with more than 3 phi nodes: %d\n", features[31]);
+	printf("FT32 - Number of basic block where total number of arguments for all phi-nodes is in greater than 5: %d\n", features[32]);
+	printf("FT33 - Number of basic block where total number of arguments for all phi-nodes is in the interval [1, 5]: %d\n", features[33]);
+	printf("FT34 - Number of switch instructions in the method: %d\n", features[34]);
+	printf("FT35 - Number of unary operations in the method: %d\n", features[35]);
+	// printf("FT36 - Number of instruction that do pointer arithmetic in the method: %d\n", features[36]);
+	// printf("FT37 - Number of indirect references via pointers (* in C): %d\n", features[37]);
+	// printf("FT38 - Number of times the address of a variables is taken (& in C): %d\n", features[38]);
+	// printf("FT39 - Number of times the address of a function is taken (& in C): %d\n", features[39]);
+	// printf("FT40 - Number of indirect calls (i.e. done via pointers) in the method: %d\n", features[40]);
+	printf("FT41 - Number of assignment instructions with the left operand an integer constant in the method: %d\n", features[41]);
+	printf("FT42 - Number of binary operations with one of the operands an integer constant in the method: %d\n", features[42]);
+	printf("FT43 - Number of calls with pointers as arguments: %d\n", features[43]);
+	printf("FT44 - Number of calls with the number of arguments is greater than 4: %d\n", features[44]);
+	printf("FT45 - Number of calls that return a pointer: %d\n", features[45]);
+	printf("FT46 - Number of calls that return an integer: %d\n", features[46]);
+	printf("FT47 - Number of occurrences of integer constant zero: %d\n", features[47]);
+	printf("FT48 - Number of occurrences of 32-bit integer constants: %d\n", features[48]);
+	printf("FT49 - Number of occurrences of integer constant one: %d\n", features[49]);
+	printf("FT50 - Number of occurrences of 64-bit integer constants: %d\n", features[50]);
+	printf("FT51 - Number of references of local variables in the method: %d\n", features[51]);
+	printf("FT52 - Number of references (def/use) of static/extern variables in the method: %d\n", features[52]);
+	printf("FT53 - Number of local variables referred in the method: %d\n", features[53]);
+	printf("FT54 - Number of static/extern variables referred in the method: %d\n", features[54]);
+	printf("FT55 - Number of local variables that are pointers in the method: %d\n", features[55]);
+	printf("FT56 - Number of static/extern variables that are pointers in the method: %d\n", features[56]);
 }
 
 void clear_features()
 {
 	for (int i = 0; i < 57; i++)
 	{
-		features_sum[i] += features[i];
 		features[i] = 0;
+	}
+}
+
+void sum_features()
+{
+	for (int i = 0; i < 57; i++)
+	{
+		features_sum[i] += features[i];
 	}
 }
 
@@ -130,7 +132,7 @@ struct plugin_features : gimple_opt_pass
 			}
 
 			gsi = gsi_start_bb(bb);
-			if (gimple_code(gsi_stmt(gsi)) == GIMPLE_PHI)
+			if (gsi_stmt(gsi) && gimple_code(gsi_stmt(gsi)) == GIMPLE_PHI)
 			{
 				features[27]++;
 			}
@@ -376,6 +378,7 @@ struct plugin_features : gimple_opt_pass
 				features[7]++;
 			}
 		}
+
 		features[26] = features[25] / features[1];
 		if (features[27] != 0)
 		{
@@ -389,7 +392,9 @@ struct plugin_features : gimple_opt_pass
 		{
 			features[28] = features[28] / (features[1] - features[29]);
 		}
+
 		print_results(features, function_name(fun));
+		sum_features();
 		return 0;
 	}
 };
